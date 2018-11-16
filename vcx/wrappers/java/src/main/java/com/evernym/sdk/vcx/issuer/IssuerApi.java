@@ -103,7 +103,7 @@ public class IssuerApi extends VcxJava.API {
         logger.debug("issuerCredntialUpdateState() called with: credentialHandle = [" + credentialHandle + "]");
         CompletableFuture<Integer> future = new CompletableFuture<>();
         int issue = addFuture(future);
-        int result = LibVcx.api.vcx_connection_get_state(issue, credentialHandle, issuerCredntialUpdateStateCB);
+        int result = LibVcx.api.vcx_issuer_credential_update_state(issue, credentialHandle, issuerCredntialUpdateStateCB);
         checkResult(result);
         return future;
     }
@@ -123,7 +123,7 @@ public class IssuerApi extends VcxJava.API {
         logger.debug("issuerCredntialGetState() called with: credentialHandle = [" + credentialHandle + "]");
         CompletableFuture<Integer> future = new CompletableFuture<>();
         int issue = addFuture(future);
-        int result = LibVcx.api.vcx_connection_get_state(issue, credentialHandle, issuerCredntialGetStateCB);
+        int result = LibVcx.api.vcx_issuer_credential_get_state(issue, credentialHandle, issuerCredntialGetStateCB);
         checkResult(result);
         return future;
     }
