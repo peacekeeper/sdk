@@ -32,7 +32,7 @@ public class IssuerApi extends VcxJava.API {
                                                                     String issuerId,
                                                                     String credentialData,
                                                                     String credentialName,
-                                                                    long price) throws VcxException {
+                                                                    String price) throws VcxException {
         ParamGuard.notNullOrWhiteSpace(sourceId, "sourceId");
         ParamGuard.notNullOrWhiteSpace(sourceId, "credentialDefId");
         ParamGuard.notNullOrWhiteSpace(sourceId, "SchemaId");
